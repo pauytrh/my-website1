@@ -71,46 +71,38 @@
     transition: transform 0.3s, color 0.3s;
 }
 
-.contact-form {
-    text-align: center;
-    margin-top: 50px;
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.input-field {
+form label {
     display: block;
-    width: 80%;
-    max-width: 400px;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid darkslateblue;
-    background-color: rgb(10, 10, 20);
-    color: darkslateblue;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-.input-field:focus {
-    border-color: rgb(50, 150, 255);
-    box-shadow: 0 0 10px rgb(50, 150, 255);
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-.submit-button {
-    display: block;
-    width: 50%;
-    max-width: 200px;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 18px;
-    color: white;
+form button {
+    padding: 10px 20px;
     background-color: darkslateblue;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
-.submit-button:hover {
-    background-color: rgb(50, 150, 255);
-    transform: scale(1.05);
+form button:hover {
+    background-color: #4a2c77;
 }
