@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>My website: Pauytrh</title>
+</head>
+<body style="background-color: rgb(10, 10, 20);">
+    <p class="centered-text">
+        <span class="bracket">&lt;</span> 
+        Hello, I'm Pauytrh!
+        <span class="bracket">&gt;</span>
+    </p>
+    <h4 class="head">A computer nerd who likes to code useless but fun stuff</h4>
+    <h3 class="head">When I don't code I:</h3>
+    <p class="text">Listen to music</p>
+    <p class="text">Solve a rubix cube</p>
+    <p class="text">Play with a diabolo</p>
+
+    <h3 class="head">Contact Me</h3>
+    <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" class="input-field" required>
+        <input type="email" name="email" placeholder="Your Email" class="input-field" required>
+        <textarea name="message" placeholder="Your Message" class="input-field" required></textarea>
+        <button type="submit" class="submit-button">Send</button>
+    </form>
+    <p id="formStatus" class="text"></p>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = event.target.name.value;
+            const email = event.target.email.value;
+            const message = event.target.message.value;
+            const statusMessage = document.getElementById('formStatus');
+
+            console.log('Form submitted:', { name, email, message });
+
+            statusMessage.textContent = 'Thank you, ' + name + '! Your message has been sent.';
+            statusMessage.style.color = 'lightgreen';
+
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>
