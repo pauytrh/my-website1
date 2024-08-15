@@ -20,12 +20,18 @@
     <p class="text">Play with a diabolo</p>
 
     <h3 class="head">Contact Me</h3>
-    <form id="contactForm" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" class="input-field" required>
-        <input type="email" name="email" placeholder="Your Email" class="input-field" required>
-        <textarea name="message" placeholder="Your Message" class="input-field" required></textarea>
-        <button type="submit" class="submit-button">Send</button>
-    </form>
+    <form action="https://formspree.io/f/xpwalpnz" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+    
+        <button type="submit">Send</button>
+    </form>    
     <p id="formStatus" class="text"></p>
 
     <script>
