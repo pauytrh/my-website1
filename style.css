@@ -1,0 +1,127 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.centered-text {
+    font-size: 24px;
+    line-height: 0.5;
+    text-align: center;
+    color: darkslateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.bracket {
+    font-size: 300px;
+    color: rgb(25, 22, 48);
+    vertical-align: middle;
+    animation: bounceIn 1.5s ease-out;
+    transition: transform 0.3s;
+}
+
+.bracket:hover {
+    transform: scale(1.1);
+}
+
+.head {
+    text-align: center; 
+    color: darkslateblue;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    animation: fadeInUp 2s ease-in-out, pulse 2s infinite;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.head:hover {
+    color: rgb(50, 150, 255);
+    transform: scale(1.05);
+}
+
+.text {
+    text-align: center; 
+    color: darkslateblue;
+    margin-top: 10px;
+    animation: fadeInUp 2s ease-in-out;
+    transition: transform 0.3s;
+}
+
+.text:hover {
+    transform: translateX(10px);
+}
+
+.text.clicked {
+    color: rgb(255, 0, 0);
+    transform: rotate(5deg);
+    transition: transform 0.3s, color 0.3s;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #4a2c77;
+}
