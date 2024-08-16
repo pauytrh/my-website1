@@ -28,3 +28,23 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         document.getElementById('formStatus').style.color = 'red';
     });
 });
+
+const observerOptions = {
+    root: null, // Use viewport as root
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the element is visible
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe each element that should have scroll animations
+document.querySelectorAll('.head, .text, form').forEach(el => {
+    observer.observe(el);
+});
