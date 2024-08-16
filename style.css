@@ -103,8 +103,8 @@
 }
 
 .head:hover {
-    color: rgb(50, 150, 255);
-    transform: scale(1.05);
+    color: #4a148c;
+    transform: scale(1.5);
 }
 
 /* Text elements with scroll animation */
@@ -113,17 +113,13 @@
     color: darkslateblue;
     margin-top: 10px;
     animation: fadeIn 2s ease-in-out;
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.3s;
+    
 }
 
 .text:hover {
-    transform: translateX(10px);
-}
-
-.text.clicked {
-    color: rgb(255, 0, 0);
-    transform: rotate(5deg);
-    transition: transform 0.3s, color 0.3s;
+    color: #4a148c;
+    transform: scale(1.5);
 }
 
 /* Form styling */
