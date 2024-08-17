@@ -104,7 +104,7 @@
 
 .head:hover {
     color: #4a148c;
-    transform: scale(1.5);
+    transform: scale(1.1);
 }
 
 /* Text elements with scroll animation */
@@ -119,7 +119,7 @@
 
 .text:hover {
     color: #4a148c;
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 /* Form styling */
@@ -154,11 +154,6 @@ form input, form textarea {
     color: #e1e1e1;
     box-sizing: border-box;
     animation: fadeIn 2s ease-in-out;
-}
-
-/* Placeholder text color */
-form input::placeholder, form textarea::placeholder {
-    color: #bfbfbf;
 }
 
 /* Custom button */
@@ -212,17 +207,4 @@ form input::placeholder, form textarea::placeholder {
 
 .discord-logo:hover {
     transform: scale(1.1);
-}
-
-/* Scroll animation styles */
-.head, .text, form {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.head.animate, .text.animate, form.animate {
-    opacity: 1;
-    transform: translateY(0);
-    animation: slideInUp 0.6s ease-out;
 }
