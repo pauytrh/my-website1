@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Pauytrh</title>
+</head>
+<body>
+    <section>
+        <h1 class="hidden" align="center">Hello, I'm Pauytrh.</h1>
+    </section>
+    <section>
+        <h2 class="hidden" align="center">A computer nerd who likes to code and create.</h2>
+    </section>
+    <section>
+        <h2 class="hidden" align="center">When I don't code I like to:</h2>
+        <div class="container">
+            <div class="image-wrapper" id="image1">
+                <img src="diabolo.png" alt="Play with a diabolo" class="small-image">
+                <div class="text-overlay">
+                    <h2 class="InImagetext">Play with a diabolo</h2>
+                    <p class="InImagetext">A diabolo is like a yoyo but bigger and with metal sticks, making it harder to control. so im playing with 2 at the same time.</p>
+                </div>
+            </div>
+            <div class="image-wrapper" id="image2">
+                <img src="brawlhalla.jpg" alt="Another activity" class="small-image">
+                <div class="text-overlay">
+                    <h2 class="InImagetext">Play brawlhalla</h2>
+                    <p class="InImagetext">brawlhalla is a 2d fighting game where you have to knock your opponent of the stage, kinda like in super smash brothers.</p>
+                </div>
+            </div>
+            <div class="image-wrapper" id="image3">
+                <img src="music.jpg" alt="Yet another activity" class="small-image">
+                <div class="text-overlay">
+                    <h2 class="InImagetext">Listen to music</h2>
+                    <p class="InImagetext">I love music a lot and have a varied taste, I hope :)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3 class="head">Contact Me</h3>
+        <form id="contactForm" action="https://formspree.io/f/xpwalpnz" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button class="custom-button" type="submit"><span class="button-text">Submit!</span></button>
+        </form>    
+        <p id="formStatus" class="text"></p>
+    </section>
+        <a href="https://discord.com/users/1147880980678463619" target="_blank" class="discord-link">
+            <img src="discord.png" alt="Discord Logo" class="discord-logo">
+        </a>
+</body>
+</html>
