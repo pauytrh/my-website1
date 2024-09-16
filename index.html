@@ -3,65 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="icon.jpg">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Pauytrh</title>
+    <title>Pauytrh's Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            color: #dcdcdc;
+            background-color: #1e1e1e;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            perspective: 1000px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #444 3px solid;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            transition: all 0.5s;
+            transform: rotateX(0deg);
+            transform-style: preserve-3d;
+        }
+        h3, h2, p {
+            transition: all 0.5s;
+            transform: rotateX(0deg);
+            transform-style: preserve-3d;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        h3:hover, p:hover, h2:hover {
+            color: #4ea6ff;
+            transform: translateY(-5px) rotateX(-5deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover, h1:hover {
+            color: #1e90ff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        }
+        section {
+            padding: 20px 0;
+            transform-style: preserve-3d;
+        }
+        .project {
+            background: #333;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <h1 class="hidden" align="center">Hello, I'm Pauytrh.</h1>
-    </section>
-    <section>
-        <h2 class="hidden" align="center">A computer nerd who likes to code and create.</h2>
-    </section>
-    <section>
-        <h2 class="hidden" align="center">When I don't code I like to:</h2>
+    <header>
         <div class="container">
-            <div class="image-wrapper" id="image1">
-                <img src="diabolo.png" alt="Play with a diabolo" class="small-image">
-                <div class="text-overlay">
-                    <h2 class="InImagetext">Play with a diabolo</h2>
-                    <p class="InImagetext">A diabolo is like a yoyo but bigger and with metal sticks, making it harder to control. so im playing with 2 at the same time.</p>
-                </div>
-            </div>
-            <div class="image-wrapper" id="image2">
-                <img src="brawlhalla.png" alt="Another activity" class="small-image">
-                <div class="text-overlay">
-                    <h2 class="InImagetext">Play brawlhalla</h2>
-                    <p class="InImagetext">brawlhalla is a 2d fighting game where you have to knock your opponent of the stage, kinda like in super smash brothers.</p>
-                </div>
-            </div>
-            <div class="image-wrapper" id="image3">
-                <img src="music.png" alt="Yet another activity" class="small-image">
-                <div class="text-overlay">
-                    <h2 class="InImagetext">Listen to music</h2>
-                    <p class="InImagetext">I love music a lot and have a varied taste, I hope :)</p>
-                </div>
-            </div>
+            <h1>Pauytrh</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
-    <section>
-        <h3 class="head">Contact Me</h3>
-        <form id="contactForm" action="https://formspree.io/f/xpwalpnz" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-        
-            <button class="custom-button" type="submit"><span class="button-text">Submit!</span></button>
-        </form>    
-        <p id="formStatus" class="text"></p>
-    </section>
-        <a href="https://discord.com/users/1147880980678463619" target="_blank" class="discord-link">
-            <img src="discord.png" alt="Discord Logo" class="discord-logo">
-        </a>
-        <a href="https://open.spotify.com/user/31i4ns24niphusaqwl4nhig2lgty?si=51a81a976f374d9f" target="_blank" class="discord-link">
-            <img src="spotify.png" alt="Discord Logo" class="discord-logo">
-        </a>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my site! My name is Pauytrh, and I am passionate about technology and coding. I enjoy working on various projects and exploring new tools and technologies. Feel free to learn more about my work and get in touch!</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Diabolo bot</h3>
+                <p>Diabolo bot is a discord bot made with python, and its a creation im very proud of. i made it using the discord api. the source code is not public but you can see its profile <a href="https://discord.com/users/1257734469826379897" target="_blank">here</a></p>
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>This project focuses on creating an innovative solution for data analysis and visualization.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Info</h2>
+            <p>If you'd like to get in touch with me, you can reach me at:</p>
+            <p>Email: <a href="mailto:pauytrh@gmail.com">pauytrh@gmail.com</a></p>
+            <p>Discord: <a href="https://discord.com/users/1147880980678463619" target="_blank">discord</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Pauytrh. All rights reserved.</p>
+    </footer>
 </body>
 </html>
